@@ -31,4 +31,4 @@ Users should be able to:
 (https://www.w3schools.com/)
 
 ## Author
-- Anan Ahmed -
+ - Anan Ahmed 
