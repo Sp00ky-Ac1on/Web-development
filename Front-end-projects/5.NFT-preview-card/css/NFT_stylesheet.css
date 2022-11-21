@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    font-weight:300;
+    flex-flow: row wrap;
+}
+
+.container {
+    margin: 120px auto;
+    position: relative;
+    border-radius: 3%;
+    width: 350px;
+    padding: 25px;
+    display: grid;
+    overflow: hidden;
+    background-color: hsl(216, 50%, 16%);
+    grid-template-columns: 60px 120px 120px;
+    grid-template-areas:   "pic1 pic1 pic1"
+                           "title title title"
+                           "para para para"
+                           "eth eth days"
+                           "hr hr hr"
+                           "create create create";                   
+}
+
+.img {
+    background-image: url(../assets/image-equilibrium.jpg);
+    background-position: center;
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 3%;
+}
+
+.icon-view {
+    background-image: url(../assets//icon-view.svg);
+    background-color: hsla(178, 100%, 50%, 50%);
+    background-position: center;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 3%;
+    grid-area: pic1;
+    opacity:0;
+    transition: 1s;    
+}
+
+.icon-view:hover {
+    opacity: 1;
+    cursor: pointer;
+    
+}
+
+h2 {
+    grid-area: title;
+    color: white;
+    font-weight:600;
+    font-size: 20px;
+    margin-top:25px;
+    margin-bottom: 9px;
+    transition: 1s;
+}
+
+h2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.p-one {
+    grid-area: para;
+    font-size: 18px;
+}
+
+.eth {
+    grid-area: eth;
+    color: hsl(178, 100%, 50%);
+    font-weight:450;
+    
+}
+
+.days {
+    grid-area: days;
+    position: relative;
+    left: 10px;
+}
+
+.p-two {
+    position: relative;
+    left: 10px;
+    font-weight:400;
+}
+
+.create {
+    grid-area: create;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    margin-bottom: -63px;
+}
+#name {
+    color: white;
+    transition: 1s;
+}
+
+#name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+hr {
+    grid-area: hr;
+    border: none;
+    border-top: 1.5px solid hsl(215, 32%, 27%);
+    margin: 7px 0px;
+}
+
+.p-three {
+    position: relative;
+    bottom: 55px;
+    left: 55px;
+    font-weight:400;
+}
+
+.p-one, .p-two, .p-three{
+    color:hsl(215, 51%, 70%);
+}
+
+#img-2 {
+    grid-area: pic2;
+    width: 35px; 
+    border: 0.1px solid white;
+    border-radius: 50%;
+    position: relative;   
+    bottom: 8px;
+    left: 3px;
+}
+
+.eth .p-two .p-three {
+    font-size: 15px;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color:hsl(215, 51%, 70%);
+    position:relative;
+    top: 119px;
+    right:6px;
+}
+
+.attribution a {
+    color: rgb(83, 83, 198);
+    transition: 1s;
+}
+
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+    
+}
+
+/* For mobile phones: */
+
+@media (max-width:375px) {
+
+        .container {
+            width: 300px; 
+            margin:10px auto; 
+        } 
+    
+        .img, .icon-view {
+            width: 250px;
+            height: 250px;
+            background-size: 250px 250px;
+        }
+
+        .icon-view {
+            width: 250px;
+            height: 250px;
+            background-size: 45px 45px;
+         }
+        
+        h2 {
+            font-size:125%;
+        }
+        
+        .p-one {width: 250px;
+                font-size:110%
+        }
+        
+        .eth {
+            width: 100px;
+        }
+        
+        .days {
+            width: 100px;
+            position: relative;
+            left:-30px;
+        }
+    
+        hr {
+            width:250px;
+        }
+        
+        body { 
+            font-size: 88%
+        }
+        
+        .attribution {
+            position: relative;
+            left: 2px;
+            top:90px;
+            font-size: 70%;
+        }
+    }
+

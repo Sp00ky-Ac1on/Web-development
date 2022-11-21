@@ -1,0 +1,280 @@
+/* General */
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ======================================================= */
+/* the navigation bar */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: end;
+    background-color: #fff;
+    margin: 0;
+    padding-left: 0;
+}
+
+#nav-list li {
+    padding: 13px 0;
+}
+
+#nav-list a {
+    color: black;
+    text-decoration:none;
+    padding: 13px 17px;
+    transition: 0.5s;
+}
+#nav-list a:hover {
+    color: #fff;
+    background: #282828;
+}
+
+/* active state */
+
+#nav-list a.active  {
+    color: #fff;
+    background-color: #282828;
+    padding: 13px auto;
+} 
+
+@media (max-width:940px ) {
+
+    #nav-list li {
+        font-size: 15px;
+    }
+    #topAnchor {
+        font-size: 15px
+    }
+}
+
+
+/* ======================================================= */
+/* Main Heading */ 
+
+.main-heading h1 {
+    line-height: 1.6em;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 110px;
+    margin: 1.7em 1rem;
+    padding-left: 60px;
+}
+
+@media (max-width:940px ) {
+
+    .main-heading h1 {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media (max-width:530px ) {
+
+    .main-heading h1 {
+        font-size: 90px;
+    }
+    .main-heading  {
+        margin-top: 250px;
+    }
+}
+
+@media (max-width:530px ) {
+
+    .main-heading h1 {
+        font-size: 75px;
+    }
+
+}
+/* ======================================================= */
+/* the Sections */
+.sections {
+    margin: 60px;
+    display: grid;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+
+.sections section {
+    width: 990px;
+    height: 85vh;
+}
+
+.sections .sec-container {
+    padding: 30px;
+}
+
+@media (max-width:1200px ) {
+    .sections section {
+        width:100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width:650px ) {
+    .sections .sec-container {
+        padding: 30px;
+    }
+}
+
+
+.sections .sec-container h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+    margin-top: 140px;
+}
+
+
+@media (max-width:550px ) {
+
+    .sections .sec-container h2 {
+        font-size: 38px;
+    }
+
+    .sections {
+        margin: 35px;
+    }
+}
+
+.sections .sec-container p {
+    line-height: 1.6em;
+
+}
+
+/* Animation */  /* i actually prefered to keep the circles moving all the time cause i found the page looked prettier this way*/
+
+.sections #section1::before , .sections #section3::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    transition: ease 0.5s all;
+    animation: rotate 5s linear 0s infinite forwards; 
+    opacity: 1;
+}
+
+.sections #section1::after , .sections #section3::after{
+    content: '';
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 1;
+    transition: ease 0.5s all;
+    animation: rotate 5s linear 0s infinite forwards reverse; 
+}
+
+.sections #section2::before , .sections #section4::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 1;
+    transition: ease 0.5s all;
+    animation: rotate 5s linear 0s infinite forwards; 
+    right: 0;
+}
+
+.sections #section4::after {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 1;
+    transition: ease 0.5s all;
+    animation: rotate 5s linear 0s infinite forwards;
+    left: 0; 
+}
+
+
+/* active state */ 
+
+section.active {
+    background: rgb(90, 13, 13);
+    background: linear-gradient(0deg, rgba(122, 32, 32, 0.541) 0%, rgba(0, 0, 0, 0) 100%);
+    
+}
+
+
+section.active .sec-container::before {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards;
+}
+
+section.active .sec-container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+                   translate(-1em)
+                   rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+                   translate(-1em) 
+                   rotate(-360deg);
+    }
+}
+
+@media (max-width:799px) {
+    .sections #section1::after , .sections #section3::after {
+        display: none;
+    }
+}
+/* End of animation section */
+
+
+/* footer */
+
+.pageFooter {
+    background-color: black;
+    text-align: center;
+    padding: 20px ;
+    margin-top: 50px;
+}
+
+.pageFooter #coded-By {
+    font-size: 11px;
+}
+
