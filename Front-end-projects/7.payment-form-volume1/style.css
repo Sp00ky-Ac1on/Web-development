@@ -1,0 +1,118 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+
+}
+form {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(170, 168, 168);
+    border-radius: 7px;
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 160px;
+}
+
+form img {
+position: absolute;
+bottom: 85%;
+left: 10%;
+width: 350px;
+
+}
+
+#primary {
+    background-color: #0073ff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+#form-details {
+     margin-top: 50px;
+}
+
+#small-flex-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 15px;
+}
+
+#visa {
+    font-weight: bold;
+
+}
+
+.input-box {
+    margin: 15px auto;
+}
+
+.first-box {
+    margin-top: 0;
+}
+
+.input-box label {
+    font-size: 12px;
+    font-weight: 600;
+}
+.input-box input {
+    width: 95%;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 2px solid rgb(235, 230, 230);
+    box-shadow: 0px 0px 4px rgb(235, 230, 230);
+    padding: 8px;
+    outline: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus {
+    border: 2px solid #6c32e3;
+}
+
+
+#expiration-mini-div {
+    display: flex;
+    gap:10px;
+}
+
+
+
+
+#submit-Cancel {
+    text-align: center;
+}
+
+#cancel {
+    background-color: #fbfafc;
+    padding: 10px 17px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(182, 181, 181);
+    font-weight:600;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#submit {
+    background-image: linear-gradient(to top, #340db5 , #7c3df0);
+    border: none;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 0px 2px #340db5;
+    font-weight:600;
+    cursor: pointer;
+}
