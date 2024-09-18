@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Info</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="form-container">
+        <form action="">
+            <img src="purple-cards.png" alt="">
+
+            <div id="form-details">
+                
+                <div id="small-flex-div">
+                    <p id="visa">Visa or Master Card</p>
+                    <p id="primary">PRIMARY</p>
+                </div>
+    
+                <div class="input-box first-box">
+                    <label for="card-number">Card number</label><br>
+                    <input type="tel" id="card-number" name="card-number" placeholder="card number 1111-2222-3333-4444" required>
+                </div>
+    
+                <div class="input-box">
+                    <label for="name">Name on card</label><br>
+                    <input type="text" id="name" name="name" placeholder="Name on card" required>
+                </div>
+    
+                <div class="input-box">
+                    <label for="expiration">Expiration</label>
+                    <div id="expiration-mini-div">
+                        <input type="text" id="expiration-month" name="expiration-month" placeholder=" MM expiration month" min="1" max="12" maxlength="2" required >
+                        <input type="TEXT" id="expiration-year" name="ration-year" placeholder="YYYY expiration year" max="30" min="25" maxlength="4" required>
+                    </div>
+                </div>
+    
+                <div class="input-box">
+                    <label for="cvv">CVV code</label><br>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV code" maxlength="3" required >
+                </div>
+    
+                <div id="submit-Cancel">
+                    <button id="cancel" type="reset"> Cancel</button>
+                    <button id="submit" type="submit">Pay Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
