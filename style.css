@@ -84,6 +84,11 @@
             background: linear-gradient(45deg,#dd00ff,#173b9f);
         }
 
+        .container .box-6::before, 
+        .container .box-6::after {
+            background: linear-gradient(45deg,#466ed1,#46c6d1);
+        }
+
         .container .box a {
             position: absolute;
             inset: 6px;
